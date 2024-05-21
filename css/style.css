@@ -1,0 +1,23 @@
+body {
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+}
+
+#search-section, #table-section {
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    #table-section {
+        margin-top: 20px;
+    }
+}
+
+.table td, .table th {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

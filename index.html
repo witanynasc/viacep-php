@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar CEP</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container d-flex align-items-center justify-content-center ">
+    <div class="row  overflow-auto">
+        <div class="col-12 col-md-12 " id="search-section">
+            <h2>Consultar Endereço</h2>
+            <div class="form-group w-50">
+                <label for="cepInput">CEP:</label>
+                <input type="text" class="form-control " id="cepInput" placeholder="Digite o CEP">
+            </div>
+            <div class="pt-3">
+                <button class="btn btn-primary" id="searchBtn">Buscar</button>
+                <button class="btn btn-success" id="saveBtn" style="display: none;">Salvar</button>
+            </div>
+            <div id="addressResult"></div>
+        </div>
+        <div class="col-12 col-md-6" id="table-section">
+            <h2>Endereços Salvos</h2>
+            <table class="table table-responsive">
+                <thead>
+                <tr>
+                    <th>CEP</th>
+                    <th>Logradouro</th>
+                    <th>Complemento</th>
+                    <th class="">Bairro
+                        <button class="btn btn-light btn-sm " onclick="sortTable('bairro')">↕</button>
+                    </th>
+                    <th class="">Cidade
+                        <button class="btn btn-light btn-sm" onclick="sortTable('localidade')">↕</button>
+                    </th>
+                    <th>UF
+                        <button class="btn btn-light btn-sm " onclick="sortTable('uf')">↕</button>
+                    </th>
+                </tr>
+                </thead>
+                <tbody id="addressTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="./js/script.js"></script>
+</body>
+</html>
